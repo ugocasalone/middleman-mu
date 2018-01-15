@@ -1,0 +1,14 @@
+!!! 5
+%html
+  = partial "/layouts/_partials/head"
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
+
+    %title= current_page.data.title || "Middleman"
+    = stylesheet_link_tag "site"
+  %body
+    = yield
+    = partial "/layouts/_partials/footer"
+    = partial "/layouts/_partials/jsinclude"
