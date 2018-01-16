@@ -25,7 +25,7 @@ page '/*.txt',  layout: false
 #-------------------------------------------------------------------------------
 # Paths
 #-------------------------------------------------------------------------------
-activate :directory_indexes
+# activate :directory_indexes
 activate :relative_assets
 set      :relative_links, true
 set      :css_dir,        "assets/stylesheets"
