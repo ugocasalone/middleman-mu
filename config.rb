@@ -10,6 +10,7 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 activate :livereload
+activate :sprockets
 #-------------------------------------------------------------------------------
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -65,6 +66,10 @@ configure :build do
   activate :minify_javascript
 end
 
+after_build do
+  system('htmlbeautifier build/*.html')
+  system('htmlbeautifier build/*/*.html')
+end
 #-------------------------------------------------------------------------------
 # Other
 #-------------------------------------------------------------------------------
